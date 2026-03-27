@@ -1,0 +1,19 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=mabase
+      - DB_USER=monuser
+      - DB_PASSWORD=monpassword
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=mabase
+      - POSTGRES_USER=monuser
+      - POSTGRES_PASSWORD=monpassword
