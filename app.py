@@ -17,6 +17,6 @@ class Handler(BaseHTTPRequestHandler):
 
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(f"Mon app DevOps fonctionne ! DB : {version}".encode())
+        self.wfile.write(f"je maitrise Docker et le DevOps ! DB : {version}".encode())
 
 HTTPServer(("0.0.0.0", 8000), Handler).serve_forever()

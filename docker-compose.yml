@@ -17,3 +17,8 @@ services:
       - POSTGRES_DB=mabase
       - POSTGRES_USER=monuser
       - POSTGRES_PASSWORD=monpassword
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
